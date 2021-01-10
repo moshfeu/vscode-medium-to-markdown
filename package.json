@@ -2,7 +2,7 @@
   "name": "medium-to-markdown",
   "displayName": "Medium to Markdown",
   "description": "Import your Medium posts into your blog",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "moshfeu",
   "engines": {
     "vscode": "^1.4.0"
@@ -17,11 +17,11 @@
   "contributes": {
     "commands": [
       {
-        "command": "medium-to-md.prompt",
-        "title": "Convert Medium post"
+        "command": "mediumToMarkdown.prompt",
+        "title": "Medium to Markdown: Convert Medium post"
       }
     ],
-    "configuration":[
+    "configuration": [
       {
         "title": "Download Path",
         "type": "object",
@@ -49,7 +49,8 @@
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
     "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install"
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "package": "vsce package"
   },
   "devDependencies": {
     "@types/vscode": "^1.38.0",
@@ -57,7 +58,6 @@
     "vscode": "^0.11.0"
   },
   "dependencies": {
-    "kebab-case": "^1.0.0",
     "medium-to-markdown": "^0.0.3",
     "ts-node": "^9.1.1"
   }

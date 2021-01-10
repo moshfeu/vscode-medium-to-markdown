@@ -1,20 +1,17 @@
 'use strict';
 import { URL } from 'url';
+import { join } from 'path';
+import { writeFile } from 'fs';
 import * as vscode from 'vscode';
-import * as kebabCase from 'kebab-case';
 import * as mediumToMarkdown from 'medium-to-markdown';
 import { getFileName, getPostDetails } from './converter';
-import { writeFile } from 'fs';
-import { join } from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
-    'medium-to-md.prompt',
+    'mediumToMarkdown.prompt',
     async () => {
       const url = await vscode.window.showInputBox({
         placeHolder: 'Medium URL',
-        value:
-          'https://medium.com/swlh/build-your-own-analytics-tool-on-corvid-by-wix-cd12ae76d291',
         validateInput: (input) => {
           try {
             new URL(input);
