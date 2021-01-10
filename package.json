@@ -20,6 +20,30 @@
         "command": "medium-to-md.prompt",
         "title": "Convert Medium post"
       }
+    ],
+    "configuration":[
+      {
+        "title": "Download Path",
+        "type": "object",
+        "properties": {
+          "mediumToMarkdown.downloadPath": {
+            "type": "string",
+            "description": "Path to the folder the posts download to",
+            "default": "/",
+            "scope": "resource"
+          },
+          "mediumToMarkdown.fileType": {
+            "type": "string",
+            "description": "",
+            "default": "md",
+            "enum": [
+              "md",
+              "mdx"
+            ],
+            "scope": "resource"
+          }
+        }
+      }
     ]
   },
   "scripts": {
