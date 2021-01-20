@@ -12,7 +12,6 @@ export function activate(context: vscode.ExtensionContext) {
     async () => {
       const url = await vscode.window.showInputBox({
         placeHolder: 'Medium URL',
-        value: 'https://medium.com/@moshfeu/is-stackoverflow-a-friend-how-to-make-it-love-you-d9010bad7a0c',
         validateInput: (input) => {
           try {
             new URL(input);
@@ -48,6 +47,8 @@ export function activate(context: vscode.ExtensionContext) {
                   output: path,
                   returnObject: true,
                   frontmatter,
+                  format: fileType,
+                  imagesPath: '',
                 });
 
                 progress.report({
