@@ -32,6 +32,12 @@
             "default": "/",
             "scope": "resource"
           },
+          "mediumToMarkdown.frontmatter": {
+            "type": "boolean",
+            "description": "Whether adding front matter to posts",
+            "default": "true",
+            "scope": "resource"
+          },
           "mediumToMarkdown.fileType": {
             "type": "string",
             "description": "",
@@ -58,7 +64,6 @@
     "vscode": "^0.11.0"
   },
   "dependencies": {
-    "medium-to-markdown": "^0.0.3",
-    "ts-node": "^9.1.1"
+    "mediumexporter": "https://github.com/moshfeu/mediumexporter"
   }
 }
