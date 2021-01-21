@@ -1,10 +1,8 @@
 'use strict';
 import { URL } from 'url';
 import { join } from 'path';
-import { writeFile } from 'fs';
 import * as vscode from 'vscode';
 import * as mediumexporter from 'mediumexporter';
-import { getFileName, getPostDetails } from './converter';
 
 export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
