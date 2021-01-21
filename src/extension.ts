@@ -36,6 +36,7 @@ export function activate(context: vscode.ExtensionContext) {
                   downloadPath,
                   fileType,
                   frontmatter,
+                  canonical,
                 } = vscode.workspace.getConfiguration('mediumToMarkdown');
 
                 const path = join(
@@ -49,6 +50,7 @@ export function activate(context: vscode.ExtensionContext) {
                   frontmatter,
                   format: fileType,
                   imagesPath: '',
+                  canonical
                 });
 
                 progress.report({

@@ -34,13 +34,19 @@
           },
           "mediumToMarkdown.frontmatter": {
             "type": "boolean",
-            "description": "Whether adding front matter to posts",
+            "description": "Whether add front matter to the post or not",
+            "default": "true",
+            "scope": "resource"
+          },
+          "mediumToMarkdown.canonical": {
+            "type": "boolean",
+            "description": "Whether add canonical link to the post (available when frontmatter = true)",
             "default": "true",
             "scope": "resource"
           },
           "mediumToMarkdown.fileType": {
             "type": "string",
-            "description": "",
+            "description": "markdown file type",
             "default": "md",
             "enum": [
               "md",
