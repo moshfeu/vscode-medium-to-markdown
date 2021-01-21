@@ -1,8 +1,10 @@
 {
 	"name": "vscode-medium-to-markdown",
-	"displayName": "Medium to Markdown",
-	"description": "",
-	"version": "0.1.0",
+  "displayName": "Medium to Markdown",
+  "description": "Import your Medium posts into your blog",
+  "version": "0.1.0",
+  "publisher": "moshfeu",
+  "repository": "https://github.com/moshfeu/vscode-medium-to-markdown",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
@@ -63,7 +65,8 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "yarn run compile && yarn run lint",
 		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
