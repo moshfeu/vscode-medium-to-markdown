@@ -8,6 +8,10 @@ export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
     'mediumToMarkdown.prompt',
     async () => {
+      if (!vscode.workspace.workspaceFolders?.length) {
+        vscode.window.showErrorMessage(`Please open your blog folder`)
+        return;
+      }
       const url = await vscode.window.showInputBox({
         placeHolder: 'Medium URL',
         validateInput: (input) => {
@@ -21,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
       });
 
       if (url) {
-        await vscode.window.withProgress(
+        await vscode.window.withProgress<void>(
           {
             location: vscode.ProgressLocation.Notification,
           },
@@ -38,7 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
                 } = vscode.workspace.getConfiguration('mediumToMarkdown');
 
                 const path = join(
-                  vscode.workspace.workspaceFolders[0].uri.fsPath,
+                  vscode.workspace.workspaceFolders![0].uri.fsPath,
                   downloadPath
                 );
 
@@ -52,7 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
                 });
 
                 progress.report({
-                  message: `Done. Post "${story.title}" saved`,
+                  message: `Done. Post "${story?.title || url}" saved`,
                   increment: 100,
                 });
                 setTimeout(() => {

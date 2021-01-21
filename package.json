@@ -1,20 +1,19 @@
 {
-  "name": "vscode-medium-to-markdown",
-  "displayName": "Medium to Markdown",
-  "description": "Import your Medium posts into your blog",
-  "version": "0.1.0",
-  "publisher": "moshfeu",
-  "engines": {
-    "vscode": "^1.38.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "*"
-  ],
-  "main": "./out/src/extension",
-  "contributes": {
+	"name": "vscode-medium-to-markdown",
+	"displayName": "Medium to Markdown",
+	"description": "",
+	"version": "0.1.0",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:mediumToMarkdown.prompt"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
     "commands": [
       {
         "command": "mediumToMarkdown.prompt",
@@ -58,18 +57,28 @@
       }
     ]
   },
-  "scripts": {
-    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "package": "vsce package"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.38.0",
-    "typescript": "^1.8.5",
-    "vscode": "^0.11.0"
-  },
-  "dependencies": {
-    "mediumexporter": "https://github.com/moshfeu/mediumexporter"
-  }
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.52.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	},
+	"dependencies": {
+		"mediumexporter": "https://github.com/moshfeu/mediumexporter#additions"
+	}
 }
