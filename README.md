@@ -1,6 +1,8 @@
 # Medium to Markdown
 
-Use Medium to Markdown to convert your Medium posts into local markdown files.
+Use Medium to Markdown to fetch and convert your Medium posts into local markdown files.
+
+<img src="https://user-images.githubusercontent.com/3723951/105638156-dacf3b00-5e79-11eb-9080-b42d29692d43.gif" alt="screen record">
 
 ## How to use?
 
