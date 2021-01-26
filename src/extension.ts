@@ -9,7 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
     'mediumToMarkdown.prompt',
     async () => {
       if (!vscode.workspace.workspaceFolders?.length) {
-        vscode.window.showErrorMessage(`Please open your blog folder`)
+        vscode.window.showErrorMessage(`Please open your blog folder`);
         return;
       }
       const url = await vscode.window.showInputBox({
@@ -52,7 +52,7 @@ export function activate(context: vscode.ExtensionContext) {
                   frontmatter,
                   format: fileType,
                   imagesPath: '',
-                  canonical
+                  canonical,
                 });
 
                 progress.report({
