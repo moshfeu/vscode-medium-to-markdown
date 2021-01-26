@@ -7,10 +7,20 @@
   "repository": "https://github.com/moshfeu/vscode-medium-to-markdown",
 	"engines": {
 		"vscode": "^1.52.0"
-	},
+  },
+  "icon": "resources/icon.png",
 	"categories": [
 		"Other"
-	],
+  ],
+  "galleryBanner": {
+    "color": "#f5f5f5",
+    "theme": "light"
+  },
+  "author": {
+    "name": "Mosh Feuchtwanger",
+    "email": "moshfeu.dev@gmail.com",
+    "url": "https://twitter.com/moshfeu"
+  },
 	"activationEvents": [
 		"onCommand:mediumToMarkdown.prompt"
 	],
