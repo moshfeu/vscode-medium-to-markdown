@@ -22,3 +22,12 @@ Run the command bellow in the [Command Palette](https://code.visualstudio.com/do
   "canonical": false // adds canoniacl tags - not relevant if "frontmatter" = false
 }
 ```
+
+## Notice
+
+This extension is basically a wrapper on top of [mediumexporter](https://github.com/moshfeu/mediumexporter/tree/additions) (forked from [xdamman](https://github.com/xdamman/mediumexporter)).
+
+The converter uses some heuristics and the result may not looks exactly how you'd like.
+Please review the result before publishing it.
+
+If you see how it can be improved please create an issue here or in the forked repo. Thank you.

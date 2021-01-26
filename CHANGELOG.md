@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "vscode-medium-to-markdown" extension will be documented in this file.
+## 0.2.0
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Support other types of iframes than gits (e.g. codepan)
 
-## [Unreleased]
+## 0.1.0
 
 - Initial release
