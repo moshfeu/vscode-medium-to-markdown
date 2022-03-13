@@ -1,3 +1,5 @@
+### Due a change in the Medium API, this extension is no longer working. If I'll find a way to fix it, I'll publish it again. Sorry
+
 # Medium to Markdown
 
 Use Medium to Markdown to fetch and convert your Medium posts into local markdown files.
